@@ -42,10 +42,10 @@ const MainTabs = () => {
 				component={Home}
 				options={{
 					tabBarLabel: ({ focused }) => (
-						<TabBarText focused={focused} title="Home" />
+						<TabBarText focused={focused} title="Hem" />
 					),
 					tabBarIcon: ({ focused }) => (
-						<TabBarIcon focused={focused} icon={'md-home'} />
+						<TabBarIcon focused={focused} icon={'home-outline'} />
 					),
 				}}
 			/>
@@ -54,25 +54,14 @@ const MainTabs = () => {
 				component={Profile}
 				options={{
 					tabBarLabel: ({ focused }) => (
-						<TabBarText focused={focused} title="Profile" />
+						<TabBarText focused={focused} title="Detalj" />
 					),
 					tabBarIcon: ({ focused }) => (
-						<TabBarIcon focused={focused} icon={'person'} />
+						<TabBarIcon focused={focused} icon={'bar-chart-outline'} />
 					),
 				}}
 			/>
-			<Tabs.Screen
-				name="About"
-				component={About}
-				options={{
-					tabBarLabel: ({ focused }) => (
-						<TabBarText focused={focused} title="About" />
-					),
-					tabBarIcon: ({ focused }) => (
-						<TabBarIcon focused={focused} icon={'ios-information-circle'} />
-					),
-				}}
-			/>
+			
 		</Tabs.Navigator>
 	);
 };

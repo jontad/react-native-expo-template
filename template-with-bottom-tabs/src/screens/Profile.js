@@ -1,19 +1,47 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Layout, Text } from 'react-native-rapi-ui';
+import { Text, Layout, Section,	SectionContent } from 'react-native-rapi-ui';
 
-export default function ({ navigation }) {
+import InfoGraph from '../components/InfoGraph';
+
+const effekt = {
+    labels: ["Mån", "Tis", "Ons", "Tors", "Fre", "Lör", "Sön"],
+    datasets: [
+      {
+        data: [20, 45, 28, 80, 99, 43, 50]
+      }
+    ]
+};
+
+const fasBelastning = {
+  labels: ["Fas 1", "Fas 2", "Fas 3"],
+  datasets: [
+    {
+      data: [20, 45, 28]
+    }
+  ]
+};
+
+
+export default function () {
 	return (
 		<Layout>
-			<View
-				style={{
-					flex: 1,
-					alignItems: 'center',
-					justifyContent: 'center',
-				}}
-			>
-				<Text>This is the Profile tab</Text>
-			</View>
+			<Section>
+        <SectionContent>
+					<Text size='xl'>Energianvändning denna vecka</Text>
+				</SectionContent>
+				<SectionContent>
+					<InfoGraph data={effekt} label="kWh"/>
+				</SectionContent>
+			</Section>
+
+      <Section>
+        <SectionContent>
+					<Text size='xl'>Fasbelastning</Text>
+				</SectionContent>
+				<SectionContent>
+					<InfoGraph data={fasBelastning}/>
+				</SectionContent>
+			</Section>			
 		</Layout>
 	);
 }

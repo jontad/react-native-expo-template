@@ -1,19 +1,25 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Layout, Text } from 'react-native-rapi-ui';
+import { Layout, Section, SectionContent } from 'react-native-rapi-ui';
 
-export default function ({ navigation }) {
+import InfoGraph from '../components/InfoGraph';
+
+const data = {
+    labels: ["Fas 1", "Fas 2", "Fas 3"],
+    datasets: [
+      {
+        data: [20, 45, 28]
+      }
+    ]
+};
+
+export default function () {
 	return (
 		<Layout>
-			<View
-				style={{
-					flex: 1,
-					alignItems: 'center',
-					justifyContent: 'center',
-				}}
-			>
-				<Text>This is the About tab</Text>
-			</View>
+			<Section>
+				<SectionContent>
+					<InfoGraph data={data}/>
+				</SectionContent>
+			</Section>	
 		</Layout>
 	);
 }

@@ -1,16 +1,10 @@
 import React from 'react';
-import { SafeAreaView, View, Linking } from 'react-native';
-import {
-	Layout,
-	Button,
-	Text,
-	Section,
-	SectionContent,
-} from 'react-native-rapi-ui';
+import { SafeAreaView } from 'react-native';
+import { Layout } from 'react-native-rapi-ui';
 
 import InfoCard from '../components/InfoCard'
 
-export default function ({ navigation }) {
+export default function () {
 	return (
 		<Layout>
 			<SafeAreaView >

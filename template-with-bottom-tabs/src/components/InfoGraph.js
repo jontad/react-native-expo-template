@@ -14,7 +14,7 @@ function InfoGraph(props) {
       data={props.data}
       width={windowWidth}
       height={220}
-      //yAxisLabel="kWh"
+      yAxisLabel={props.label}
       chartConfig={chartConfig}
       yLabelsOffset={25}
       />
@@ -32,9 +32,7 @@ const styles = StyleSheet.create({
 });
 
 const graphStyle = {
-  marginVertical: 8,
-  borderRadius: 20,
-  width: '10%'
+
 }
 
 const chartConfig = {
