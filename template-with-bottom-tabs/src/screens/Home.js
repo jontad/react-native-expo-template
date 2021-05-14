@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Linking } from 'react-native';
+import { SafeAreaView, View, Linking } from 'react-native';
 import {
 	Layout,
 	Button,
@@ -8,40 +8,31 @@ import {
 	SectionContent,
 } from 'react-native-rapi-ui';
 
+import InfoCard from '../components/InfoCard'
+
 export default function ({ navigation }) {
 	return (
 		<Layout>
-			<View
-				style={{
-					flex: 1,
-					alignItems: 'center',
-					justifyContent: 'center',
-					marginHorizontal: 20,
-				}}
-			>
-				<Section>
-					<SectionContent>
-						<Text fontWeight="bold" style={{ textAlign: 'center' }}>
-							These UI components provided by Rapi UI
-						</Text>
-						<Button
-							style={{ marginTop: 10 }}
-							text="Rapi UI Documentation"
-							status="info"
-							onPress={() => Linking.openURL('https://rapi-ui.kikiding.space/')}
-						/>
-						<Button
-							text="Go to second screen"
-							onPress={() => {
-								navigation.navigate('SecondScreen');
-							}}
-							style={{
-								marginTop: 10,
-							}}
-						/>
-					</SectionContent>
-				</Section>
-			</View>
+			<SafeAreaView >
+				<InfoCard 
+				headerText='Användande nu' 
+				leftText='1337 w' 
+				timeText='8m'
+				/>
+				<InfoCard 
+				headerText='Förbrukning idag' 
+				leftText='234 kWh' 
+				rightText='129.02 kr' 
+				timeText='8m'
+				/>
+				<InfoCard 
+				headerText='Situation' 
+				leftText='EXPORT'
+				timeText='8m'
+				/>
+			</SafeAreaView>
 		</Layout>
+
+		
 	);
 }
