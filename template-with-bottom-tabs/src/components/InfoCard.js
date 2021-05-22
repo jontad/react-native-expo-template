@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet } from 'react-native';
+import { Layout, Section, SectionContent, Text } from 'react-native-rapi-ui';
 import { Card } from "react-native-elements";
 
 /*
@@ -7,8 +8,8 @@ Single infocard displayed on home page
 that shows desired information
 */
 
-
 function InfoCard(props) {
+    
    return(
     <Card wrapperStyle={styles.wrapperStyle} containerStyle={styles.container}>
         <Card.FeaturedTitle style={styles.headerText}>{props.headerText}</Card.FeaturedTitle>

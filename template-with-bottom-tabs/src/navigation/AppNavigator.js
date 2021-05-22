@@ -7,10 +7,10 @@ import { theme } from 'react-native-rapi-ui';
 import TabBarIcon from '../components/utils/TabBarIcon';
 import TabBarText from '../components/utils/TabBarText';
 
-import Home from '../screens/Home';
+import Hem from '../screens/Hem';
 import SecondScreen from '../screens/SecondScreen';
-import About from '../screens/About';
-import Profile from '../screens/Profile';
+import Fasbelastning from '../screens/Fasbelastning';
+import Detalj from '../screens/Detalj';
 
 const MainStack = createStackNavigator();
 const Main = () => {
@@ -36,10 +36,9 @@ const MainTabs = () => {
 				activeTintColor: theme.primary,
 			}}
 		>
-			{/* these icons using Ionicons */}
 			<Tabs.Screen
-				name="Home"
-				component={Home}
+				name="Hem"
+				component={Hem}
 				options={{
 					tabBarLabel: ({ focused }) => (
 						<TabBarText focused={focused} title="Hem" />
@@ -50,14 +49,27 @@ const MainTabs = () => {
 				}}
 			/>
 			<Tabs.Screen
-				name="Profile"
-				component={Profile}
+				name="Detalj"
+				component={Detalj}
 				options={{
 					tabBarLabel: ({ focused }) => (
 						<TabBarText focused={focused} title="Detalj" />
 					),
 					tabBarIcon: ({ focused }) => (
 						<TabBarIcon focused={focused} icon={'bar-chart-outline'} />
+					),
+				}}
+			/>
+			
+			<Tabs.Screen
+				name="Fasbelastning"
+				component={Fasbelastning}
+				options={{
+					tabBarLabel: ({ focused }) => (
+						<TabBarText focused={focused} title="Fasbelastning" />
+					),
+					tabBarIcon: ({ focused }) => (
+						<TabBarIcon focused={focused} icon={'flash-outline'} />
 					),
 				}}
 			/>

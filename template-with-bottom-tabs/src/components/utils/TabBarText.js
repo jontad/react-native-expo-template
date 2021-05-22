@@ -7,7 +7,7 @@ export default (props) => {
 			fontWeight="bold"
 			style={{
 				marginBottom: 5,
-				color: props.focused ? '#5db075' : 'rgb(143, 155, 179)',
+				color: props.focused ? '#2071B5' : 'rgb(143, 155, 179)',
 				fontSize: 10,
 			}}
 		>
