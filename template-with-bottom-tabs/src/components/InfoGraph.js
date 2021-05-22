@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Dimensions } from 'react-native';
 import { SectionContent } from 'react-native-rapi-ui';
 import { BarChart } from "react-native-chart-kit";
@@ -21,8 +22,6 @@ function InfoGraph(props) {
         yLabelsOffset={25}
       />
 		</SectionContent>
-    
-
   );  
 }
 

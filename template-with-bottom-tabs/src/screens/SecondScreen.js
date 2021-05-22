@@ -7,9 +7,9 @@ export default function ({ navigation }) {
 	return (
 		<Layout>
 			<TopNav
-				middleContent="Second Screen"
+				middleContent="Förklaring Export/Import"
 				leftContent={
-					<Ionicons name="chevron-back" size={20} color={theme.black} />
+					<Ionicons name="chevron-back" size={20} color='#2071B5'  />
 				}
 				leftAction={() => navigation.goBack()}
 			/>
@@ -21,6 +21,8 @@ export default function ({ navigation }) {
 				}}
 			>
 				{/* This text using ubuntu font */}
+				<Text fontWeight="bold">This is the second screen</Text>
+				<Text fontWeight="bold">This is the second screen</Text>
 				<Text fontWeight="bold">This is the second screen</Text>
 			</View>
 		</Layout>

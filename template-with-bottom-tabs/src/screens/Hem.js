@@ -1,10 +1,27 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView, TouchableOpacity } from 'react-native';
+
 import { Layout } from 'react-native-rapi-ui';
+import { Ionicons } from '@expo/vector-icons';
 
 import InfoCard from '../components/InfoCard'
 
-export default function () {
+
+
+export default function ({ navigation }) {
+
+	function informationButton() {
+		return(
+			<TouchableOpacity onPress={() => {navigation.navigate('SecondScreen');}}>
+				<Ionicons
+					name="information-circle-outline"
+					style={{ opacity: 0.6, color: '#2071B5' }}
+					size={25}
+				/>	
+			</TouchableOpacity>
+		);
+	}
+
 	return (
 		<Layout>
 			<SafeAreaView >
@@ -25,7 +42,7 @@ export default function () {
 				<InfoCard 
 				headerText='Situation' 
 				leftText='Export: 98% (Neg)'
-				timeText='8m'
+				infoPosition={informationButton(navigation)}
 				/>
 			</SafeAreaView>
 		</Layout>

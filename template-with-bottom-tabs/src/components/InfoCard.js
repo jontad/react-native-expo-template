@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet } from 'react-native';
-import { Layout, Section, SectionContent, Text } from 'react-native-rapi-ui';
+
 import { Card } from "react-native-elements";
 
 /*
@@ -16,7 +16,7 @@ function InfoCard(props) {
         {
          <Card.FeaturedSubtitle style={styles.leftText}>{props.leftText}</Card.FeaturedSubtitle>        
         }
-        <Card.FeaturedTitle style={styles.timeText}>{props.timeText}</Card.FeaturedTitle>
+        <Card.FeaturedTitle style={styles.infoPosition}>{props.infoPosition}</Card.FeaturedTitle>
         {
          <Card.FeaturedSubtitle style={styles.rightText}>{props.rightText}</Card.FeaturedSubtitle>        
         }
@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
     container: {
         borderColor: 'rgba(158, 150, 150, .1)', 
         borderRadius: 10, 
-        //width: '80%'
     },
     headerText: {
         color: 'rgba(70, 70, 70, 1)'
@@ -37,12 +36,10 @@ const styles = StyleSheet.create({
     leftText: {
         color: 'rgba(70, 70, 70, 1)'
     },
-    timeText: {
-        color: '#BDBDBD', 
-        fontSize: 12,  
+    infoPosition: { 
         position: 'absolute', 
-        right: 0, 
-        top: 0
+        right: -5, 
+        top: -8
     },
     rightText: {
         color: 'rgba(70, 70, 70, 1)',  

@@ -1,9 +1,10 @@
 import React from 'react';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
 import { theme } from 'react-native-rapi-ui';
+
 import TabBarIcon from '../components/utils/TabBarIcon';
 import TabBarText from '../components/utils/TabBarText';
 
@@ -11,6 +12,7 @@ import Hem from '../screens/Hem';
 import SecondScreen from '../screens/SecondScreen';
 import Fasbelastning from '../screens/Fasbelastning';
 import Detalj from '../screens/Detalj';
+
 
 const MainStack = createStackNavigator();
 const Main = () => {
